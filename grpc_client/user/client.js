@@ -1,5 +1,10 @@
 const grpc = require('grpc');
 const protoLoader = require('@grpc/proto-loader');
+// /home/steadylearner/Desktop/code/site/grpc-postgresql/typeDefs/options
+// /home/steadylearner/Desktop/code/site/grpc-postgresql/grpc_client/user/typeDefs/options
+
+// const PROTO_PATH = `../../typeDefs/user.proto`;
+// const options = require(`${__dirname}/typeDefs/options`);
 
 const PROTO_PATH = "../../typeDefs/user.proto";
 const options = require("../../typeDefs/options");

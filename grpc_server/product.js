@@ -14,7 +14,7 @@ const main = () => {
     const server = new grpc.Server()
 
     server.addService(productproto.ProductService.service, productResolvers)
-    const port = "127.0.0.1:50051";
+    const port = "127.0.0.1:50050";
 
     server.bind(port, grpc.ServerCredentials.createInsecure());
     const blue = chalk.blue

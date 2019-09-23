@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "grpc-postgresql with CRUD operation and tests",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "www.steadylearner.com",
   "license": "ISC",
@@ -13,7 +10,16 @@
     "@grpc/proto-loader": "^0.5.2",
     "chalk": "^2.4.2",
     "dotenv": "^8.1.0",
+    "express": "^4.17.1",
     "grpc": "^1.23.3",
+    "moment": "^2.24.0",
     "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "supertest": "^4.0.2",
+    "tape": "^4.11.0"
+  },
+  "scripts": {
+    "test-tape": "node tests/index.js"
   }
 }
