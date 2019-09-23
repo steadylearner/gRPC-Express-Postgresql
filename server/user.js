@@ -5,15 +5,7 @@ const chalk = require("chalk");
 const userResolvers = require("./resolvers/user");
 
 const PROTO_PATH = "../typeDefs/user.proto";
-
-// https://www.npmjs.com/package/@grpc/proto-loader
-const options = {
-    keepCase: true, // important to use true
-    longs: String,
-    enums: String,
-    defaults: true,
-    oneofs: true
-};
+const options = require("../typeDefs/options");
 
 const packageDefinition = protoLoader.loadSync(PROTO_PATH, options);
 const userproto = grpc.loadPackageDefinition(packageDefinition);
