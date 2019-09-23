@@ -2,6 +2,11 @@ syntax = "proto3";
 
 service ProductService {
     rpc getProducts(Empty) returns (Products) {}
+    rpc getProduct(ProductId) returns (Product) {}
+    rpc deleteProduct(ProductId) returns (Empty) {}
+    rpc create(CreateProduct) returns (Product) {}
+    rpc update(UpdateProduct) returns (Product) {}
+    rpc deleteProducts(Empty) returns (Empty) {}
 }
 
 message Empty {}
@@ -9,6 +14,21 @@ message Empty {}
 message Discount {
     float pct = 1;
     uint32 value_in_cents = 2;
+}
+
+message CreateProduct {
+    uint32 price_in_cents = 2;
+    string title = 3;
+    string description = 4;
+    float pct = 5;
+}
+
+message UpdateProduct {
+    string id = 1;
+    uint32 price_in_cents = 2;
+    string title = 3;
+    string description = 4;
+    float pct = 5;
 }
 
 message Product {
@@ -21,4 +41,8 @@ message Product {
 
 message Products {
     repeated Product products = 1;
+}
+
+message ProductId {
+    string id = 1;
 }
