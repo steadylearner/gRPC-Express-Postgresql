@@ -1,17 +1,19 @@
 {
-  "name": "grpc-posgresql",
+  "name": "grpc-postgresql",
   "version": "1.0.0",
-  "description": "",
+  "description": "grpc-postgresql with CRUD operation and tests",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "www.steadylearner.com",
   "license": "ISC",
   "dependencies": {
     "@grpc/proto-loader": "^0.5.2",
     "chalk": "^2.4.2",
-    "grpc": "^1.23.3"
+    "dotenv": "^8.1.0",
+    "grpc": "^1.23.3",
+    "pg": "^7.12.1"
   }
 }
