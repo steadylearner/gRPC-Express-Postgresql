@@ -1,4 +1,4 @@
-const client = require("./client");
+const client = require("../client");
 
 let newProduct = {
     "price_in_cents": 1000,
@@ -12,7 +12,7 @@ let newProduct = {
 
 client.create(newProduct,(error, product) => {
     if(!error){
-        console.log('The Product was created successfully', product);
+        console.log('The product was created successfully', product);
     }
     else{
         console.error(error);

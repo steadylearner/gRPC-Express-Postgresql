@@ -1,4 +1,4 @@
-const client = require('./client');
+const client = require('../client');
 
 let product = {
     "id": "d544a8f0-d9f50be459c8",
