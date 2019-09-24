@@ -2,6 +2,7 @@ syntax = "proto3";
 
 service UserService {
     rpc getUser(UserId) returns (User) {}
+    rpc create(User) returns (User) {}
 }
 
 message Empty {}

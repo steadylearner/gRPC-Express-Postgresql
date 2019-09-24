@@ -20,6 +20,8 @@
     "tape": "^4.11.0"
   },
   "scripts": {
+    "grpc-product": "cd grpc_server && node product.js",
+    "grpc-user": "cd grpc_server && node user.js",
     "test-tape": "node tests/index.js"
   }
 }

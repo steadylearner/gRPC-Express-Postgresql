@@ -33,7 +33,10 @@ router.get("/", (req, res) => {
 
       // use this instead if you want to test isBlackFriday
       // if (true) {
-        // console.log("Today is the black friday. Give 10% discount anyway.")
+      // console.log("Today is the black friday. Give 10% discount anyway.");
+
+      // or
+      // if (isBlackFriday([10, 24])) {
 
       if (isBlackFriday(dateTodayWithoutYear())) {
         const pct = "0.1"; // discount

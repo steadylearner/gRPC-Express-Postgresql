@@ -20,7 +20,7 @@ const main = () => {
     const blue = chalk.blue
     const target = blue(`http://${port}`)
 
-    console.log(`🚀 gRPC server ready at ${target}`);
+    console.log(`🚀 gRPC product server ready at ${target}`);
     server.start();
 }
 

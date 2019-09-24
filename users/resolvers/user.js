@@ -33,6 +33,46 @@ const getUser = async ({ request }, callback) => {
     }
 };
 
+const create = async ({ request }, callback) => {
+    const sql = "INSERT INTO users(id, first_name, last_name, date_of_birth) VALUES($1, $2, $3, $4)";
+
+    const { id, first_name, last_name, date_of_birth } = request;
+
+    const query = {
+        text: sql,
+        values: [id, first_name, last_name, date_of_birth],
+    };
+
+    try {
+        const { rowCount } = await db.query(query);
+
+        if (rowCount === 1) {
+            console.log(`Create ${rowCount} user with id(${id}).`);
+            callback(null, {
+                id,
+                first_name,
+                last_name,
+                date_of_birth,
+            });
+        } else {
+            callback({
+                code: grpc.status.CANCELLED,
+                details: "CANCELLED",
+            })
+
+            // This goes to catch part
+            // callback({
+            //     code: grpc.status.ALREADY_EXISTS,
+            //     details: "ALREADY EXISTS",
+            // })
+        }
+    } catch (e) {
+        console.log(e);
+        callback(e);
+    }
+};
+
 module.exports = {
     getUser,
+    create,
 }
