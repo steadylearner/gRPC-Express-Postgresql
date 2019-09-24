@@ -4,13 +4,13 @@
 
 2. **users** folder should include **grpc_user server** and **user.proto**.
 
-# The purpose
+## The purpose
 
 1. Blackfirday, return the product list with 10% discount.
 
 2. Birthday, return the product list with 5% discount.
 
-3. When not 1. and 2, return the product list.  
+3. When not 1. and 2, return the product list.
 
 4. Without Connection for users gRPC server, return the product list
 
