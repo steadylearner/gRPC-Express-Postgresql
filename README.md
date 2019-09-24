@@ -6,7 +6,7 @@
 
 ## The purpose
 
-1. Blackfirday, return the product list with 10% discount.
+1. Blackfriday, return the product list with 10% discount.
 
 2. Birthday, return the product list with 5% discount.
 
